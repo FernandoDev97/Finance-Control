@@ -5,7 +5,8 @@ export const TemplateContainer = tw.div`
     h-screen 
     bg-gray-100 
     flex 
-    justify-center
+    flex-col
+    items-center
 `
 
 export const TemplateContent = tw.div`
