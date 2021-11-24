@@ -23,7 +23,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "src/pages/Dashboard/index.tsx"  ],
   "exclude": [
     "node_modules"
   ]
