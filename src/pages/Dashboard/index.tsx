@@ -1,6 +1,7 @@
 import { Button } from "../../components/Button";
 import { Card } from "../../components/Card";
 import { TemplateContainer } from "../../components/templates";
+import Router from 'next/router'
 
 export default function Dashboard() {
 
@@ -12,14 +13,18 @@ export default function Dashboard() {
         { id: '4', expense: 'Amazon', category:'streamming', cost: 9.99}
     ]
 
+    function handleAddNewExpense () {
+        Router.push('/dashboard/add')
+    }
+
     return (
         <TemplateContainer>
             <header className='w-full max-w-screen-lg h-1/6 flex items-center justify-between'>
                 <span className='font-bold text-2xl'>
-                    Finance control
+                    Finance Control
                 </span>
                 <nav className='flex gap-4'>
-                    <Button>Adicionar nova Conta</Button>
+                    <Button onClick={handleAddNewExpense}>Adicionar nova Despesa</Button>
                     <Button variat='ghost'>Sair</Button>
                 </nav>
             </header>

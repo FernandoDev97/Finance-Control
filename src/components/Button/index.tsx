@@ -3,7 +3,7 @@ import tw from 'tailwind-styled-components'
 
 interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
     children: ReactNode
-    variat?: 'ghost' | 'delete'
+    variat?: 'ghost' | 'delete' | 'edit'
 }
 
 export const Button = ({children, variat, ...props}: Props) => {
@@ -22,6 +22,14 @@ export const Button = ({children, variat, ...props}: Props) => {
            </DeleteButton>
        )
    }
+
+   if(variat === 'edit') {
+    return (
+        <EditButton {...props}>
+            {children}
+        </EditButton>
+    )
+}
 
     return (
         <MainButton {...props}>
@@ -52,12 +60,24 @@ export const LogoutButton = tw(BaseButton)`
 export const DeleteButton = tw.button `
     h-10
     max-w-lg 
-    px-8
+    px-4
     font-bold
     rounded-md
     text-red-500
     hover:bg-gray-100
     absolute 
-    top-0 
+    bottom-0 
     right-0
+`
+export const EditButton = tw.button`
+    h-10
+    max-w-lg 
+    px-4
+    font-bold
+    rounded-md
+    text-purple-500
+    hover:bg-gray-100
+    absolute 
+    bottom-0 
+    right-20
 `
