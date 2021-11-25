@@ -1,8 +1,11 @@
-import Dashboard from "../../src/pages/Dashboard"
+import React from 'react'
+import Dashboard from '../../src/pages/Dashboard'
 
 const index = () => {
     return (
-        <Dashboard/>
+        <div>
+            <Dashboard/>
+        </div>
     )
 }
 

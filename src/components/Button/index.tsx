@@ -7,7 +7,8 @@ interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 export const Button = ({children, variat, ...props}: Props) => {
-   if(variat === 'ghost'){ 
+  
+    if(variat === 'ghost'){ 
     return (
         <LogoutButton {...props}>
             {children}
